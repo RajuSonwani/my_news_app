@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express();
 const axios = require("axios");
+const port = process.env.PORT||8000;
 
 //Static Files;
 app.use(express.static("public"))
@@ -22,7 +23,7 @@ const newsRouter = require("./src/routes/news");
 app.use(newsRouter);
 
 // Listning on Port 8000;
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log("server is running on port 8000")
 })
 
