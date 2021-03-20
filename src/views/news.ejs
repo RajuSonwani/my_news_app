@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodejs News</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Top News</h1>
+    <h3 class="sponsor">PoweredBy@Google</h3>
+    <hr>
+    <div class="articles">
+        <% if(articles==null){ %>
+            <h2> SORRY..! <br> NO Data Found. </h2>
+        <% }else {%>
+                <% articles.articles.forEach(obj=>{ %>
+                    <div class="article">
+                        <a target="_blank" href=<%=obj.url %> >
+                            <img src=<%=obj.urlToImage %> alt="img" width="400" height="300">
+                        </a>
+                        <h3 class="head">
+                            <%=obj.title %>
+                        </h3>
+                        <p class="desc">
+                            <%=obj.description %>
+                        </p>
+                    </div>
+                <% }) %>
+        <%}%>
+    </div>
+</body>
+
+</html>
