@@ -6,10 +6,13 @@ This will initialise a new project for you and it’s going to ask you a few que
 
 //Dependencies Installation
 
-[x] Body-parser
-[x] EJS
-[x] Express
-[x] Axios
+Body-parser
+
+EJS
+
+Express
+
+Axios
 
 npm install ejs express body-parser dotenv axios
 Restarting the local server
